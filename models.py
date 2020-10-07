@@ -66,6 +66,13 @@ class Post(AbstractPage):
 
   def get_absolute_url(self):
       return reverse("post", kwargs={"slug": self.slug})
+    
+  @property 
+  def sequence_number(self):
+    current_post = self 
+    posts = list(Post.objects.filter(is_active=True).order_by('-id'))
+    number = posts.index(current_post)
+    return number
 
 
 class PostCategory(AbstractPage):
