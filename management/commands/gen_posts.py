@@ -94,8 +94,7 @@ class Command(BaseCommand):
     for i in range(1, 100):
       i+=1
       title   = f"Корпорація Kubota презентувала нові трактори серії М{i}"
-      content = f"Трактор M511{i} потужністю 115 к.с. 
-      оснащений 4-циліндровим дизельним двигуном Kubota, який відповідає вимогам стандарту Euro IV."
+      content = f"Трактор M511{i} потужністю 115 к.с. оснащений 4-циліндровим дизельним двигуном Kubota, який відповідає вимогам стандарту Euro IV."
       content += text 
       post, _ = Post.objects.get_or_create(
         title=title,
