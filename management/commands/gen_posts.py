@@ -84,13 +84,6 @@ text = """
 
 class Command(BaseCommand):
   def handle(self, *args, **kwargs):
-    amount = PostCategory.objects.all().count() or 1
-    last_item = Post.objects.all().last()
-    if last_item:
-      i = last_item.id + 1
-    else:
-      i = 0
-    # while True:
     for i in range(1, 100):
       i+=1
       title   = f"Корпорація Kubota презентувала нові трактори серії М{i}"
@@ -101,10 +94,9 @@ class Command(BaseCommand):
         content=content,
         image="blog/post/test1.jpg"
       )
-      try:
-        post.category=PostCategory.objects.get(id=random.randint(1, amount))
-      except:
-        pass
+      categories = PostCategory.objects.all()
+      if categories.exists():
+        post.category = random.choice(categories)
       post.save()
       print(post)
     self.stdout.write(self.style.SUCCESS('Data imported successfully'))
