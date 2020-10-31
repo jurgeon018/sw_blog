@@ -8,8 +8,8 @@ from ..models import *
 from .serializers import PostSerializer
 
 from sw_utils.mail import box_send_mail
-from sw_utils.sw_global_config.models import GlobalConfig
-# from sw_shop.sw_catalog.models import CatalogueConfig
+from sw_global_config.models import GlobalConfig
+# from sw_catalog.models import CatalogueConfig
 
 def filter_search(posts, query):
     search = query.get('q')

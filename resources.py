@@ -2,7 +2,7 @@ from import_export.resources import ModelResource
 from .models import * 
 
 
-from sw_utils.sw_global_config.models import GlobalMarker 
+from sw_global_config.models import GlobalMarker 
 
 
 class PostResource(ModelResource):
