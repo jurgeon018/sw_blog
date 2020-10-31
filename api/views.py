@@ -7,9 +7,9 @@ from django.views.decorators.csrf import csrf_exempt
 from ..models import *
 from .serializers import PostSerializer
 
-from box.core.mail import box_send_mail
-from box.core.sw_global_config.models import GlobalConfig
-# from box.apps.sw_shop.sw_catalog.models import CatalogueConfig
+from sw_utils.mail import box_send_mail
+from sw_utils.sw_global_config.models import GlobalConfig
+# from sw_shop.sw_catalog.models import CatalogueConfig
 
 def filter_search(posts, query):
     search = query.get('q')

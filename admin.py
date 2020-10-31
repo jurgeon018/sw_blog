@@ -5,11 +5,11 @@ from django.db import models
 from django.forms import NumberInput, Textarea, TextInput
 from django.utils.translation import gettext_lazy as _
 from modeltranslation.admin import TabbedTranslationAdmin, TranslationStackedInline
-from box.core.utils import BaseAdmin , seo 
+from sw_utils.utils import BaseAdmin , seo 
 # from adminsortable.admin import SortableAdmin
-from box.core.utils import BaseAdmin
+from sw_utils.utils import BaseAdmin
 from .models import *
-from box.core.utils import (
+from sw_utils.utils import (
     show_admin_link,
     AdminImageWidget, seo, 
 )

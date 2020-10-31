@@ -16,7 +16,7 @@ from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from django.conf import settings 
 
-from box.core.models import AbstractPage, BaseMixin
+from sw_utils.models import AbstractPage, BaseMixin
 
 User = get_user_model() 
 

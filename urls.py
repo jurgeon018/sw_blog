@@ -3,5 +3,5 @@ from .views import *
 
 
 urlpatterns = [
-  path('', include('box.apps.sw_blog.api.urls')),
+  path('', include('sw_blog.api.urls')),
 ]
